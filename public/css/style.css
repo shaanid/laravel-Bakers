@@ -1,0 +1,150 @@
+.navbar-nav{
+
+    font-size: 20px;
+    font-family: var(--bs-body-font-family);
+    padding: 20px 50px;
+    font-weight: 500;
+    margin-left: 68%;
+
+}
+
+.navbar-brand{
+    margin-left:3%;
+}
+
+.image1{
+    height: 600px;
+}
+
+.overflow-hidden{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: var(--bs-body-font-family)
+}
+
+.text1{
+    margin-inline-start: 5%;
+    margin-top: 5%;
+    margin-inline-end: 8%;
+    font-weight: 200%;
+    font-size: large;
+    margin-bottom: 8%;
+}
+
+.cake1{
+    margin-bottom: 10%;
+}
+
+.banner-text{
+    margin-top: 13%;
+    margin-left: 35%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 300%;
+    font-weight: bold;
+
+}
+
+.banner-text1{
+
+    margin-left: 80%;
+    margin-bottom: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    color: white;
+}
+
+.foot{
+    margin-top: 10%;
+}
+
+
+.head1{
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+.card1{
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.sign{
+    margin-top: 5%;
+    margin-left: 20%;
+}
+
+.sign1{
+    margin-left: 20%;
+}
+
+.membertext{
+    margin-left: 20%;
+}
+
+
+/* dashboard
+ */
+
+ .hello{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+
+ /* dashboard ends */
+
+
+ .past{
+    margin-top: 10%;
+ }
+
+
+ .adminfont{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+ }
+
+
+ .head4{
+    margin-top: 10%;
+    margin-bottom: 3%;
+    margin-left: 20%;
+ }
+
+
+ .msg1{
+    margin-left: 20%;
+    margin-right: 20%;
+ }
+
+ .msg2{
+    margin-top: 9%;
+ }
+
+
+
+
+
+ .past>img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.btn1{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+
+/* .itemrs{
+    padding: 1px;
+    margin-top: 1%;
+} */
+
+.btnn{
+    margin-top: -55%;
+}
+
