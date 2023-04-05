@@ -14,7 +14,9 @@
                 <thead style="border-bottom: 2px solid #6c6c6c;">
                     <tr>
                         <th style="width: 10%">Order ID</th>
+
                         <th style="width: 50%">Products</th>
+                        <th style="width: 10%">Cutomer</th>
                         <th style="width: 10%">quantity</th>
                         {{-- <th style="width: 10%">Status</th> --}}
                         <th style="width: 10%">Total Price</th>
@@ -38,9 +40,11 @@
                                     <table class="w-100">
                                         @foreach ($order['products'] as $item)
                                             <tr>
+
                                                 <td width="10%"><img src="{{ asset('storage/images/' . $item['image']) }}"
                                                         style="height: 50px; width: 50px; object-fit: cover;"></td>
                                                 <td width="60">{{ $item['name'] }}</td>
+
                                                 {{-- <td width="30" class="text-center">{{ $item['qty'] }} x ₹ {{ $item['price'] }}</td> --}}
                                                 {{-- <td width="60" class="text-center">{{ $item['qty'] }}</td> --}}
 
@@ -53,7 +57,7 @@
                                         </tr>
                                     </table>
                                 </td>
-
+                                <th style="vertical-align: top;">{{ $order['user_id'] }}</th>
                                 <td style="vertical-align: top;">{{ $item['qty'] }}</td>
 
                                 <td style="vertical-align: top;">{{ $order['total_price'] }}</td>

@@ -15,7 +15,7 @@
                         </li>
                         <li>
                             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline text-white">Category</span> </a>
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline text-white">Add Products</span> </a>
                             <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                                 <li class="w-100">
                                     <a href={{route('catcake')}} class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Cake</span>  </a>
@@ -25,6 +25,25 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline text-white">Add Products</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="{{route('product1')}}" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Cake</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('product2')}}" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Pastry</a>
+                                </li>
+                                <li>
+                                    {{-- <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 3</a> --}}
+                                </li>
+                                <li>
+                                    {{-- <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 4</a> --}}
+                                </li>
+                            </ul>
+
                         <li>
                             <a href="{{route('showorder')}}" class="nav-link px-0 align-middle text-white">
                                 <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
@@ -34,23 +53,7 @@
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Messages</span> </a>
                         </li>
                         </li>
-                        {{-- <li>
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline text-white">Products</span> </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 3</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">Product</span> 4</a>
-                                </li>
-                            </ul> --}}
+
                         </li>
                         <li>
                             <a href="{{route('customers')}}" class="nav-link px-0 align-middle text-white">

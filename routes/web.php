@@ -31,19 +31,15 @@ Route::get('signup','authcontroller@signup')->name('signup');
 Route::get('/','authcontroller@login')->name('login');
 Route::post('authstore','authcontroller@authstore')->name('authstore');
 Route::post('dologin','authcontroller@dologin')->name('dologin');
-
 Route::get('logout','authcontroller@logout')->name('logout');
+
+// message
 
 Route::post('message','usercontroller@message')->name('message');
 
-
+// middleware for admin starts
 
 Route::group(['middleware'=>'role'], function(){
-
-// usercontrol
-
-Route::get('home','usercontroller@home')->name('home');
-
 
 // admincontrol
 
@@ -55,6 +51,42 @@ Route::get('msg','admincontroller@msg')->name('msg');
 
 Route::get('catcake','categorycontroller@catcake')->name('catcake');
 Route::get('catpastry','categorycontroller@catpastry')->name('catpastry');
+
+
+// show products in admin panel
+
+Route::get('product1','admincontroller@product1')->name('product1');
+
+Route::get('product2','admincontroller@product2')->name('product2');
+
+// show orders
+
+Route::get('showorder','admincontroller@showorder')->name('showorder');
+
+
+
+
+
+Route::get('customers','admincontroller@customers')->name('customers');
+
+});
+
+// middleware for admin ends
+
+
+
+
+
+// middleware for user starts
+
+Route::group(['middleware'=>'user'], function(){
+
+// usercontrol
+
+Route::get('home','usercontroller@home')->name('home');
+
+// category for users cake and pastry
+
 Route::get('cake','categorycontroller@cake')->name('cake');
 Route::get('pastry','categorycontroller@pastry')->name('pastry');
 
@@ -64,21 +96,27 @@ Route::get('pastry','categorycontroller@pastry')->name('pastry');
 Route::get('cart','cartcontroller@cart')->name('cart');
 Route::post('cakecart/{cakeid}','cartcontroller@cakecart')->name('cakecart');
 Route::post('pastrycart/{pastryid}','cartcontroller@pastrycart')->name('pastrycart');
-
-
 Route::get('checkout','cartcontroller@checkout')->name('checkout');
 Route::get('orders', 'cartcontroller@orders')->name('orders');
 
 Route::get('success','cartcontroller@success')->name('success');
 
-Route::get('customers','admincontroller@customers')->name('customers');
 
 });
 
 
-Route::get('remove/{removecart}','cartcontroller@removecart')->name('removecart');
+// remove from cart
+Route::get('removecart/{id}','cartcontroller@removecart')->name('removecart');
+
+// orders
 
 Route::post('placeorder','cartcontroller@placeorder')->name('placeorder');
 
-Route::get('showorder','admincontroller@showorder')->name('showorder');
+
+// remove products for admin
+
+Route::get('removepastry/{pastryid}','admincontroller@removepastry')->name('removepastry');
+Route::get('removecake/{cakeid}','admincontroller@removecake')->name('removecake');
+
+
 

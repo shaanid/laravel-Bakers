@@ -5,7 +5,7 @@
 
 
 
-<div id="carouselExample" class="carousel slide">
+{{-- <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active image1">
         <img src="/image/cake8.jpg" class="d-block w-100" alt="...">
@@ -23,7 +23,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+  </div> --}}
 
 
 

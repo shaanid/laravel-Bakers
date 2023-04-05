@@ -24,6 +24,9 @@ class admincontroller extends Controller
         return view('admin.message', compact('details'));
     }
 
+
+    // show orders
+
     public function showorder()
     {
         $orders = order::all()->toArray();
@@ -57,9 +60,41 @@ class admincontroller extends Controller
         return view('admin.showorders', compact('orders'));
     }
 
+    //end show orders
+
 
     public function customers(){
         $customers=user::where('id','>',1)->get();
         return view('admin.customers',compact('customers'));
     }
+
+    //show products
+
+    public function product1(){
+        $showproducts = categorycake::all();
+        $showproducts = categorycake::paginate(4);
+        return view('admin.product1',compact('showproducts'));
+    }
+
+    public function product2(){
+        $showproducts = categorypastry::all();
+        $showproducts = categorypastry::paginate(4);
+        return view('admin.product2',compact('showproducts'));
+    }
+
+
+
+    public function removepastry($id){
+        $showproducts = categorypastry::find($id);
+        $showproducts->delete();
+        return redirect()->route('product2');
+    }
+
+    public function removecake($id){
+        $showproducts = categorycake::find($id);
+        $showproducts->delete();
+        return redirect()->route('product1');
+    }
+
+
 }
