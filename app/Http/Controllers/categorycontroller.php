@@ -34,7 +34,7 @@ class categorycontroller extends Controller
             if(request()->hasFile('image')){
                 $extension = request('image')->extension();
                 $filename = 'cake_pic'.time().'.'.$extension;
-                request('image')->storeAs('public/images',$filename);
+                request('image')->storeAs('images',$filename);
                 $input['image'] = $filename;
 
             }
