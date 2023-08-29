@@ -40,11 +40,11 @@ class authcontroller extends Controller
         {
             $input = $request->all();
             $this->validate($request,[
-                'email' => 'required|email',
+                'name' => 'required',
                 'password' => 'required',
             ]);
 
-            if(auth()->attempt(array('email' =>$input['email'], 'password' => $input['password']))){
+            if(auth()->attempt(array('name' =>$input['name'], 'password' => $input['password']))){
                 if(auth()->user()->role == 1){
                     return redirect()->route('dashboard');
                 }else{
